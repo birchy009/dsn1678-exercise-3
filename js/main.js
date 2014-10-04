@@ -1,25 +1,25 @@
-var sales1 = $('.sales1');
-var sales2 = $('.sales2');
-var salesDetails1 = $('.sales__details1');
-var salesDetails2 = $('.sales__details2');
+var salesLeft = $('.sales-left');
+var salesRight = $('.sales-right');
+var salesDetailsLeft = $('.sales__details-left');
+var salesDetailsRight = $('.sales__details-right');
 
-var buttonClickHandler1 = function () {
-	var currentState = salesDetails1.attr('data-state');
+var buttonClickHandlerLeft = function () {
+	var currentState = salesDetailsLeft.attr('data-state');
 	if (currentState == 'active') {
-		salesDetails1.attr('data-state', 'inactive');
+		salesDetailsLeft.attr('data-state', 'inactive');
 	} else {
-		salesDetails1.attr('data-state', 'active');
+		salesDetailsLeft.attr('data-state', 'active');
 	}
 };
 
-var buttonClickHandler2 = function () {
-	var currentState = salesDetails2.attr('data-state');
+var buttonClickHandlerRight = function () {
+	var currentState = salesDetailsRight.attr('data-state');
 	if (currentState == 'active') {
-		salesDetails2.attr('data-state', 'inactive');
+		salesDetailsRight.attr('data-state', 'inactive');
 	} else {
-		salesDetails2.attr('data-state', 'active');
+		salesDetailsRight.attr('data-state', 'active');
 	}
 };
 
-sales1.on('click', buttonClickHandler1);
-sales2.on('click', buttonClickHandler2);
+salesLeft.on('click', buttonClickHandlerLeft);
+salesRight.on('click', buttonClickHandlerRight);
